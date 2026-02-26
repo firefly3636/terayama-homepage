@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寺山茂樹 | 司 紘人 - 認知症脳科学・歌手・講演家</title>
+    <meta name="description" content="寺山茂樹（司 紘人）公式サイト。認知症予防・改善の講演活動、歌手活動、著書「さよなら、アルツハイマー」、デイサービス「あした音」の紹介。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1a3a5c;
+            --primary-light: #2d5a8e;
+            --accent: #c8953e;
+            --accent-light: #e8b560;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --bg: #fafafa;
+            --white: #ffffff;
+            --section-alt: #f0f4f8;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            transition: all 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #3a7bd5 100%);
+            color: var(--white);
+            padding-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(255,255,255,0.05) 0%, transparent 70%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .hero-text .tagline {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 32px;
+            line-height: 1.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(200,149,62,0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.6);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 340px;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid rgba(255,255,255,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 24px;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-size: 0.95rem;
+        }
+
+        .section-alt {
+            background: var(--section-alt);
+        }
+
+        /* ===== PROFILE ===== */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .profile-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .profile-card ul {
+            list-style: none;
+        }
+
+        .profile-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .profile-card li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-card .label {
+            font-weight: 500;
+            color: var(--primary);
+            display: inline-block;
+            min-width: 100px;
+        }
+
+        /* ===== CAREER TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent), var(--primary));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+            padding: 20px 28px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 26px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 3px var(--accent);
+        }
+
+        .timeline-item .year {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        /* ===== BOOK ===== */
+        .book-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .book-cover {
+            width: 240px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 8px;
+            padding: 32px 24px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: 8px 8px 30px rgba(0,0,0,0.15);
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+        }
+
+        .book-cover:hover {
+            transform: rotate(0deg);
+        }
+
+        .book-cover .book-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .book-cover h3 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .book-cover .author {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .book-info h3 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .book-info p {
+            margin-bottom: 16px;
+            color: var(--text-light);
+            line-height: 2;
+        }
+
+        .btn-amazon {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff9900;
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-amazon:hover {
+            background: #e68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,153,0,0.3);
+        }
+
+        /* ===== ACTIVITIES (Cards) ===== */
+        .activity-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .activity-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .activity-card .icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .activity-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .activity-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* ===== ASHITANE ===== */
+        .ashitane-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .ashitane-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .ashitane-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .ashitane-card .location {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .ashitane-card .tel {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .ashitane-card .tel a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .ashitane-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            color: var(--text-light);
+            line-height: 2;
+        }
+
+        /* ===== LINKS ===== */
+        .link-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .link-card .link-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .link-card .link-text h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .link-card .link-text p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 40px 24px;
+        }
+
+        footer .footer-name {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 24px;
+                gap: 16px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { display: flex; }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+                padding: 40px 24px;
+            }
+
+            .hero-text h1 { font-size: 2.2rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-image { order: -1; }
+            .hero-image img { width: 240px; height: 240px; }
+
+            .profile-grid { grid-template-columns: 1fr; }
+            .book-section { grid-template-columns: 1fr; text-align: center; }
+            .book-cover { margin: 0 auto; }
+            .activity-cards { grid-template-columns: 1fr; }
+            .ashitane-grid { grid-template-columns: 1fr; }
+
+            section { padding: 60px 20px; }
+        }
+
+        /* ===== LECTURE / CONTACT ===== */
+        .lecture-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .lecture-info h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lecture-info p {
+            color: var(--text-light);
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .lecture-topics {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .lecture-topics li {
+            padding: 10px 16px;
+            background: var(--white);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .lecture-targets {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .target-tag {
+            padding: 6px 16px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .contact-info-box {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 24px;
+        }
+
+        .contact-info-box h4 {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .contact-item:last-child { border-bottom: none; }
+
+        .contact-item .ci-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover { text-decoration: underline; }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .contact-form h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .form-group label .required {
+            color: #e74c3c;
+            font-size: 0.8rem;
+            margin-left: 4px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 40px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .form-submit:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26,58,92,0.3);
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success .success-icon { font-size: 3rem; margin-bottom: 16px; }
+        .form-success h3 { color: var(--primary); margin-bottom: 8px; }
+        .form-success p { color: var(--text-light); }
+
+        @media (max-width: 768px) {
+            .lecture-content { grid-template-columns: 1fr; }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#" class="nav-logo">寺山茂樹</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#profile">プロフィール</a></li>
+            <li><a href="#career">経歴</a></li>
+            <li><a href="#book">著書</a></li>
+            <li><a href="#activities">活動</a></li>
+            <li><a href="#lecture">講演依頼</a></li>
+            <li><a href="#ashitane">あした音</a></li>
+            <li><a href="#links">リンク</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-text">
+            <p class="subtitle">認知症脳科学 ／ 歌手 ／ 講演家</p>
+            <h1>寺山 茂樹</h1>
+            <p class="subtitle" style="font-size:1rem; margin-bottom:8px;">Shigeki Terayama</p>
+            <p class="tagline">
+                歌を通じた介護予防デイサービス「あした音」代表取締役。<br>
+                認知症予防・改善をテーマに各地で講演活動を行いながら、<br>
+                歌手・司 紘人（つかさ ひろと）としても精力的に活動中。
+            </p>
+            <div class="hero-buttons">
+                <a href="#book" class="btn btn-primary">著書を見る</a>
+                <a href="#activities" class="btn btn-outline">活動について</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile.png" alt="寺山茂樹 プロフィール写真">
+        </div>
+    </div>
+</section>
+
+<section id="profile" class="section-alt">
+    <div class="section-container">
+        <h2 class="section-title fade-in">プロフィール</h2>
+        <p class="section-subtitle fade-in">Profile</p>
+        <div class="profile-grid">
+            <div class="profile-card fade-in">
+                <h3>基本情報</h3>
+                <ul>
+                    <li><span class="label">氏名</span>寺山 茂樹（てらやま しげき）</li>
+                    <li><span class="label">芸名</span>司 紘人（つかさ ひろと）</li>
+                    <li><span class="label">出身地</span>広島県</li>
+                    <li><span class="label">役職</span>株式会社ウェイブ・ジャパン 代表取締役</li>
+                    <li><span class="label">専門</span>認知症脳科学</li>
+                </ul>
+            </div>
+            <div class="profile-card fade-in">
+                <h3>主な活動</h3>
+                <ul>
+                    <li>通所介護デイサービス「あした音」の運営</li>
+                    <li>認知症予防・改善をテーマにした全国講演</li>
+                    <li>歌手「司 紘人」としての音楽活動</li>
+                    <li>デュエット「天神橋」（野上こうじ氏と共に）</li>
+                    <li>著書「さよなら、アルツハイマー」出版</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="career">
+    <div class="section-container">
+        <h2 class="section-title fade-in">経歴</h2>
+        <p class="section-subtitle fade-in">Career History</p>
+        <div class="timeline fade-in">
+            <div class="timeline-item">
+                <div class="year">歌手デビュー</div>
+                <p>ロサンゼルス・日米劇場にて歌手デビュー</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2002年</div>
+                <p>板橋新人音楽祭 準グランプリ受賞</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2002年</div>
+                <p>名古屋・御園座にてワンマンショーを開催</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">TV司会 18年間</div>
+                <p>千葉テレビ・BS12「歌謡最前線」の司会を18年間務める</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">事業開始</div>
+                <p>株式会社ウェイブ・ジャパンを設立。通所介護デイサービス「あした音」を開設し、歌を通じた介護予防事業を展開</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">著書出版</div>
+                <p>「さよなら、アルツハイマー」を出版。認知症予防・改善の知見を広く発信</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">現在</div>
+                <p>野上こうじ氏とデュエット「天神橋」で音楽活動を継続しながら、認知症予防・改善をテーマに全国で講演活動中</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="book" class="section-alt">
+    <div class="section-container">
+        <h2 class="section-title fade-in">著書</h2>
+        <p class="section-subtitle fade-in">Book</p>
+        <div class="book-section fade-in">
+            <div class="book-cover">
+                <div class="book-icon">📖</div>
+                <h3>さよなら、<br>アルツハイマー</h3>
+                <p class="author">寺山 茂樹 著</p>
+            </div>
+            <div class="book-info">
+                <h3>さよなら、アルツハイマー</h3>
+                <p>
+                    認知症予防と改善に長年取り組んできた著者が、その知識と経験を一冊にまとめた渾身の著作。
+                    通所介護デイサービス「あした音」での実践や、認知症脳科学の知見をもとに、
+                    認知症と向き合うすべての方へ向けたメッセージが込められています。
+                </p>
+                <a href="https://www.amazon.co.jp/dp/B0FD45NQV6" target="_blank" rel="noopener" class="btn-amazon">
+                    📦 Amazonで購入する
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="activities">
+    <div class="section-container">
+        <h2 class="section-title fade-in">活動</h2>
+        <p class="section-subtitle fade-in">Activities</p>
+        <div class="activity-cards">
+            <div class="activity-card fade-in">
+                <div class="icon">🎤</div>
+                <h3>歌手活動</h3>
+                <img src="images/tenjinbashi.png" alt="デュエット天神橋 - 野上こうじ＆司紘人" style="width:100%;border-radius:12px;margin-bottom:12px;object-fit:cover;max-height:220px;">
+                <p>
+                    芸名「司 紘人」として、ロサンゼルス日米劇場でデビュー。
+                    板橋新人音楽祭準グランプリ受賞。名古屋・御園座でワンマンショーを開催。
+                    現在は野上こうじ氏とデュエット「天神橋」で活動中。
+                </p>
+            </div>
+            <div class="activity-card fade-in">
+                <div class="icon">🎙️</div>
+                <h3>テレビ出演</h3>
+                <p>
+                    千葉テレビ・BS12の音楽番組「歌謡最前線」の司会を18年間にわたり務め、
+                    多くの歌手や視聴者と音楽の魅力を共有してきました。
+                </p>
+            </div>
+            <div class="activity-card fade-in">
+                <div class="icon">🧠</div>
+                <h3>講演活動</h3>
+                <p>
+                    認知症予防・改善をテーマに各地で講演を実施。
+                    認知症脳科学の知見と実践経験をもとに、
+                    予防法や改善のヒントをわかりやすくお伝えしています。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="lecture" class="section-alt">
+    <div class="section-container">
+        <h2 class="section-title fade-in">講演依頼</h2>
+        <p class="section-subtitle fade-in">Lecture Request</p>
+        <div class="lecture-content">
+            <div class="fade-in">
+                <div class="lecture-info">
+                    <h3>🎤 講演テーマ</h3>
+                    <p>認知症予防・改善の最前線について、実践的な知識と経験をもとにお話しします。</p>
+                    <ul class="lecture-topics">
+                        <li>🧠 認知症の予防と改善 ― 今日からできること</li>
+                        <li>📖 リコード法 ― 最新の認知症アプローチ</li>
+                        <li>🎵 音楽と認知機能 ― 歌が脳に与える効果</li>
+                        <li>💪 日常生活でできる脳トレーニング</li>
+                    </ul>
+                    <h3>🏢 対象</h3>
+                    <div class="lecture-targets">
+                        <span class="target-tag">自治体</span>
+                        <span class="target-tag">介護施設</span>
+                        <span class="target-tag">企業</span>
+                        <span class="target-tag">一般向け</span>
+                        <span class="target-tag">医療関係者</span>
+                        <span class="target-tag">地域コミュニティ</span>
+                    </div>
+                </div>
+                <div class="contact-info-box">
+                    <h4>📞 お問い合わせ先</h4>
+                    <div class="contact-item">
+                        <span class="ci-icon">📞</span>
+                        <div><strong>電話</strong><br><a href="tel:04-7167-1232">04-7167-1232</a>（あした音かしわ）</div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="ci-icon">📠</span>
+                        <div><strong>FAX</strong><br>04-7197-4556</div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="ci-icon">📧</span>
+                        <div><strong>メール</strong><br><a href="mailto:firefly3636@gmail.com">firefly3636@gmail.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="ci-icon">📍</span>
+                        <div>〒277-0832 千葉県柏市北柏3-14-1 鈴木ビル1階<br>株式会社ウェイブ・ジャパン</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form fade-in" id="contactForm">
+                <h3>✉️ 講演依頼・お問い合わせフォーム</h3>
+                <form id="lectureForm" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label>お名前<span class="required">*必須</span></label>
+                        <input type="text" name="name" required placeholder="山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label>団体・組織名</label>
+                        <input type="text" name="organization" placeholder="○○市役所、○○介護施設 など">
+                    </div>
+                    <div class="form-group">
+                        <label>メールアドレス<span class="required">*必須</span></label>
+                        <input type="email" name="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>電話番号</label>
+                        <input type="tel" name="phone" placeholder="03-1234-5678">
+                    </div>
+                    <div class="form-group">
+                        <label>お問い合わせ種別<span class="required">*必須</span></label>
+                        <select name="type" required>
+                            <option value="">選択してください</option>
+                            <option value="lecture">講演のご依頼</option>
+                            <option value="media">メディア出演のご依頼</option>
+                            <option value="ashitane">あした音について</option>
+                            <option value="book">著書について</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>希望日時・場所（講演の場合）</label>
+                        <input type="text" name="datetime" placeholder="2026年○月○日、○○市内の会場">
+                    </div>
+                    <div class="form-group">
+                        <label>お問い合わせ内容<span class="required">*必須</span></label>
+                        <textarea name="message" required placeholder="講演の内容、参加人数、ご予算など、詳細をお書きください。"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">📨 送信する</button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">✅</div>
+                    <h3>送信完了</h3>
+                    <p>お問い合わせありがとうございます。<br>内容を確認の上、折り返しご連絡いたします。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ashitane" class="section-alt">
+    <div class="section-container">
+        <h2 class="section-title fade-in">あした音</h2>
+        <p class="section-subtitle fade-in">Music Day - Ashitane</p>
+        <p class="ashitane-intro fade-in">
+            ミュージック・デイ「あした音」は、株式会社ウェイブ・ジャパンが運営する
+            通所介護デイサービスです。<br>
+            「みんなで歌えば心がはずむ、楽しく唄って介護予防」をモットーに、
+            歌や音楽を取り入れた機能訓練を通じて、心身の健康維持と認知機能改善を目指しています。
+        </p>
+        <div class="ashitane-grid fade-in">
+            <div class="ashitane-card">
+                <h3>🎵 あした音 かしわ</h3>
+                <p class="location">〒277-0832 千葉県柏市北柏3-14-1 鈴木ビル1階</p>
+                <p class="tel"><a href="tel:04-7167-1232">📞 04-7167-1232</a></p>
+            </div>
+            <div class="ashitane-card">
+                <h3>🎵 あした音 とりで</h3>
+                <p class="location">〒302-0004 茨城県取手市取手2-8-8 グレースユウキ2階</p>
+                <p class="tel"><a href="tel:0297-84-6680">📞 0297-84-6680</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="links">
+    <div class="section-container">
+        <h2 class="section-title fade-in">リンク</h2>
+        <p class="section-subtitle fade-in">Links</p>
+        <div class="link-cards fade-in">
+            <a href="https://www.amazon.co.jp/dp/B0FD45NQV6" target="_blank" rel="noopener" class="link-card">
+                <span class="link-icon">📦</span>
+                <div class="link-text">
+                    <h4>Amazon - 著書</h4>
+                    <p>「さよなら、アルツハイマー」</p>
+                </div>
+            </a>
+            <a href="https://www.ameba.jp/profile/general/23-0871/" target="_blank" rel="noopener" class="link-card">
+                <span class="link-icon">📝</span>
+                <div class="link-text">
+                    <h4>Amebaブログ</h4>
+                    <p>司 紘人（寺山茂樹）〜 認知症脳科学 〜</p>
+                </div>
+            </a>
+            <a href="https://ashitane3.com/" target="_blank" rel="noopener" class="link-card">
+                <span class="link-icon">🎵</span>
+                <div class="link-text">
+                    <h4>あした音 公式サイト</h4>
+                    <p>通所介護デイサービス</p>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/@%E5%AF%BA%E5%B1%B1%E8%8C%82%E6%A8%B9a.k.a.%E5%8F%B8%E7%B4%98%E4%BA%BA" target="_blank" rel="noopener" class="link-card">
+                <span class="link-icon">▶️</span>
+                <div class="link-text">
+                    <h4>YouTubeチャンネル</h4>
+                    <p>寺山茂樹 a.k.a. 司紘人</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p class="footer-name">寺山 茂樹 ／ 司 紘人</p>
+    <p>株式会社ウェイブ・ジャパン 代表取締役</p>
+    <p style="margin-top: 16px; font-size: 0.8rem; opacity: 0.6;">&copy; 2025 Shigeki Terayama. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('active');
+    });
+});
+
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+});
+
+function submitForm(e) {
+    e.preventDefault();
+    var form = document.getElementById('lectureForm');
+    var formData = new FormData(form);
+    var subject = encodeURIComponent('【講演依頼】' + formData.get('name') + '様より');
+    var body = encodeURIComponent(
+        'お名前: ' + formData.get('name') + '\n' +
+        '団体名: ' + formData.get('organization') + '\n' +
+        'メール: ' + formData.get('email') + '\n' +
+        '電話: ' + formData.get('phone') + '\n' +
+        '種別: ' + formData.get('type') + '\n' +
+        '希望日時・場所: ' + formData.get('datetime') + '\n\n' +
+        'お問い合わせ内容:\n' + formData.get('message')
+    );
+    window.location.href = 'mailto:firefly3636@gmail.com?subject=' + subject + '&body=' + body;
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
